@@ -3,7 +3,6 @@ const chalk=require("chalk");
 
 const addNote=(title,body)=>{
     const notes=loadNotes();
-    debugger
 
     const duplicateNotes=notes.filter((note)=> note.title===title);
     const duplicateNote=notes.find((note)=>note.title===title);
@@ -14,7 +13,7 @@ const addNote=(title,body)=>{
     // })
 
     
-    if(duplicateNote.length===0){
+    if(duplicateNotes.length===0){
         notes.push({
             title: title,
             body: body
